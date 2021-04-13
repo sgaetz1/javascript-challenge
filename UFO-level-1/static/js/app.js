@@ -26,10 +26,12 @@ form.on("submit", runEnter);
 function runEnter() {
   d3.event.preventDefault();
 
+  $("#tableID").empty();
+
   var inputElement = d3.select("#datetime");
   var inputValue = inputElement.property("value");
   console.log(inputValue);
-  
+
   var filteredData = tableData.filter(dates => dates.datetime === inputValue);
   console.log(filteredData);
   
