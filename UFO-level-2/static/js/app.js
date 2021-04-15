@@ -55,7 +55,24 @@ function runEnter() {
     tableData = tableData.filter(obj => obj.state === stateValue);
     console.log(tableData);
   }
+
+  var countryElement = d3.select("#country");
+  var countryValue = countryElement.property("value");
+  console.log(countryValue);
+
+  if (countryValue != "") {
+    tableData = tableData.filter(obj => obj.country === countryValue);
+    console.log(tableData);
+  }
   
+  var shapeElement = d3.select("#shape");
+  var shapeValue = shapeElement.property("value");
+  console.log(shapeValue);
+
+  if (shapeValue != "") {
+    tableData = tableData.filter(obj => obj.shape === shapeValue);
+    console.log(tableData);
+  }
 
 
   
