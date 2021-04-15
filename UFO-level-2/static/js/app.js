@@ -33,19 +33,34 @@ function runEnter() {
   var dateValue = dateElement.property("value");
   console.log(dateValue);
 
+  if (dateValue != "") {
+    tableData = tableData.filter(obj => obj.datetime === dateValue);
+    console.log(tableData);
+  }
+
   var cityElement = d3.select("#city");
   var cityValue = cityElement.property("value");
   console.log(cityValue);
 
-  var filteredData = tableData.filter(obj => (obj.datetime === dateValue) && (obj.city === cityValue));
-  console.log(filteredData);
+  if (cityValue != "") {
+    tableData = tableData.filter(obj => obj.city === cityValue);
+    console.log(tableData);
+  }
 
+  var stateElement = d3.select("#state");
+  var stateValue = stateElement.property("value");
+  console.log(stateValue);
+
+  if (stateValue != "") {
+    tableData = tableData.filter(obj => obj.state === stateValue);
+    console.log(tableData);
+  }
   
 
 
   
   // put filtered data into the table
-  filteredData.forEach((siting) => {
+  tableData.forEach((siting) => {
     var row = tbody.append("tr");
 
     Object.entries(siting).forEach(([key, value]) => {
