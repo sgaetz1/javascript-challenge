@@ -1,2 +1,2 @@
 # javascript-challenge
-This is the repository for my JavaScript homework.
+This is the repository for my JavaScript homework. This project dynamically creates a table from UFO sightings data and allows users to filter the table data for specific values. The folder ```UFO-level-1``` has the JavaScript code that filters by ```date/time```. The folder ```UFO-level-2``` contains the JavaScript code to allow the user to set multiple filters, inluding ```date```, ```city```, ```state```, ```country```, and ```shape```. 
