@@ -1,6 +1,8 @@
 // from data.js
 var tableData = data;
+// check that app.js loaded
 console.log("app.js loaded");
+// look at the data
 console.log(data);
 
 // put the data into a table
@@ -29,6 +31,7 @@ function runEnter() {
   $("#tableID").empty();
 
 
+  // filter the date
   var dateElement = d3.select("#datetime");
   var dateValue = dateElement.property("value");
   console.log(dateValue);
@@ -38,6 +41,7 @@ function runEnter() {
     console.log(tableData);
   }
 
+  // filter the city
   var cityElement = d3.select("#city");
   var cityValue = cityElement.property("value");
   console.log(cityValue);
@@ -47,6 +51,7 @@ function runEnter() {
     console.log(tableData);
   }
 
+  // filter the state
   var stateElement = d3.select("#state");
   var stateValue = stateElement.property("value");
   console.log(stateValue);
@@ -56,6 +61,7 @@ function runEnter() {
     console.log(tableData);
   }
 
+  // filter the country
   var countryElement = d3.select("#country");
   var countryValue = countryElement.property("value");
   console.log(countryValue);
@@ -65,6 +71,7 @@ function runEnter() {
     console.log(tableData);
   }
   
+  // filter the shape
   var shapeElement = d3.select("#shape");
   var shapeValue = shapeElement.property("value");
   console.log(shapeValue);
